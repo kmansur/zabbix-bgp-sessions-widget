@@ -107,7 +107,7 @@ Expected module information:
 
 ```text
 Name: BGP Sessions
-Version: 0.3.4
+Version: 0.3.5
 Author: Net Tech
 Status: Enabled
 ```
@@ -244,7 +244,7 @@ Informação esperada do módulo:
 
 ```text
 Name: BGP Sessions
-Version: 0.3.4
+Version: 0.3.5
 Author: Net Tech
 Status: Enabled
 ```
