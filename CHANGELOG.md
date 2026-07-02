@@ -10,6 +10,14 @@ All notable changes to this project are documented in this file.
 
 The format follows the idea of keeping clear, human-readable release notes.
 
+### [0.3.5] - 2026-07-02
+
+#### Changed
+
+- Replaced internal-looking README examples with generic placeholder values.
+- Renamed the CSS asset to `widget.css` so the filename is not tied to a specific module version.
+- Updated the module manifest to reference the generic CSS asset name.
+
 ### [0.3.4] - 2026-07-02
 
 #### Changed
@@ -18,7 +26,6 @@ The format follows the idea of keeping clear, human-readable release notes.
 - Hid the `State: Established` line when the BGP session is UP.
 - The state line is now shown only when the session is not UP, such as DOWN, STALE or UNKNOWN.
 - Kept automatic discovery for the Juniper BGP item key pattern.
-- Kept CSS cache-busting by using a versioned CSS filename: `widget_v034.css`.
 
 ### [0.3.3] - 2026-07-02
 
@@ -32,7 +39,7 @@ The format follows the idea of keeping clear, human-readable release notes.
 #### Fixed
 
 - Fixed CSS loading/cache issue that caused cards to appear as unstyled plain text.
-- Added a versioned CSS file to force the browser/Zabbix frontend to load the correct layout.
+- Added a dedicated CSS asset for the corrected card layout.
 
 ### [0.3.1] - 2026-07-02
 
@@ -87,6 +94,14 @@ Todas as alterações relevantes deste projeto estão documentadas neste arquivo
 
 O formato segue a ideia de manter notas de versão claras e fáceis de entender.
 
+### [0.3.5] - 2026-07-02
+
+#### Alterado
+
+- Substituídos os exemplos do README que pareciam informações internas por valores genéricos.
+- Renomeado o asset CSS para `widget.css`, evitando vincular o nome do arquivo a uma versão específica do módulo.
+- Atualizado o manifesto do módulo para referenciar o nome genérico do CSS.
+
 ### [0.3.4] - 2026-07-02
 
 #### Alterado
@@ -95,7 +110,6 @@ O formato segue a ideia de manter notas de versão claras e fáceis de entender.
 - Removida a linha `State: Established` quando a sessão BGP está UP.
 - A linha de estado agora aparece somente quando a sessão não está UP, como DOWN, STALE ou UNKNOWN.
 - Mantida a descoberta automática para o padrão de keys BGP Juniper.
-- Mantido o controle de cache do CSS usando arquivo versionado: `widget_v034.css`.
 
 ### [0.3.3] - 2026-07-02
 
@@ -109,7 +123,7 @@ O formato segue a ideia de manter notas de versão claras e fáceis de entender.
 #### Corrigido
 
 - Corrigido problema de carregamento/cache do CSS que fazia os cards aparecerem como texto puro sem formatação.
-- Adicionado arquivo CSS versionado para forçar o navegador/frontend do Zabbix a carregar o layout correto.
+- Adicionado asset CSS dedicado para o layout corrigido em cards.
 
 ### [0.3.1] - 2026-07-02
 
