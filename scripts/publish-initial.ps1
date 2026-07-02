@@ -40,7 +40,7 @@ gh repo create $RepositoryName `
 gh repo edit --add-topic zabbix,zabbix-widget,bgp,juniper,monitoring,snmp,network-monitoring
 
 # Create and push the first version tag.
-git tag -a v0.3.4 -m "BGP Sessions widget v0.3.4"
-git push origin v0.3.4
+git tag -a v0.3.5 -m "BGP Sessions widget v0.3.5"
+git push origin v0.3.5
 
 Write-Host "Repository published successfully." -ForegroundColor Green
