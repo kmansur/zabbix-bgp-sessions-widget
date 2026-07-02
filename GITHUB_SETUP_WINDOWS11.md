@@ -6,7 +6,27 @@
 
 ## English
 
-This guide shows how to create the GitHub repository and push the first version of the **BGP Sessions** widget using Windows 11 and PowerShell.
+This guide shows how to create the GitHub repository and push the first version of the **BGP Sessions** widget using **Windows 11**, **PowerShell**, **Git** and **GitHub CLI**.
+
+The examples use the local workspace:
+
+```text
+C:\GitHub
+```
+
+The local repository folder will be:
+
+```text
+C:\GitHub\zabbix-bgp-sessions-widget
+```
+
+The Zabbix module directory inside the repository is:
+
+```text
+C:\GitHub\zabbix-bgp-sessions-widget\bgp_sessions
+```
+
+When installing on the Zabbix frontend server, copy only the `bgp_sessions` directory to the Zabbix modules directory.
 
 ### Suggested repository information
 
@@ -55,14 +75,12 @@ Login with a web browser
 
 ### 3. Create the local project folder
 
-Adjust the path if you prefer another location.
-
 ```powershell
-# Creates a local workspace folder.
-mkdir C:\Projetos
+# Creates the local GitHub workspace folder if it does not already exist.
+mkdir C:\GitHub -Force
 
 # Enters the workspace folder.
-cd C:\Projetos
+cd C:\GitHub
 
 # Creates the repository folder.
 mkdir zabbix-bgp-sessions-widget
@@ -73,22 +91,27 @@ cd zabbix-bgp-sessions-widget
 
 ### 4. Copy the project files
 
-Copy all files from this prepared project folder into:
+Copy all prepared project files into:
 
 ```text
-C:\Projetos\zabbix-bgp-sessions-widget
+C:\GitHub\zabbix-bgp-sessions-widget
 ```
 
 The final folder should contain:
 
 ```text
-bgp_sessions\
-README.md
-INSTALL.md
-CHANGELOG.md
-GITHUB_SETUP_WINDOWS11.md
-.gitignore
+C:\GitHub\zabbix-bgp-sessions-widget\
+│
+├── bgp_sessions\
+├── README.md
+├── INSTALL.md
+├── CHANGELOG.md
+├── GITHUB_SETUP_WINDOWS11.md
+├── .gitignore
+└── scripts\
 ```
+
+The `bgp_sessions` directory is the actual Zabbix frontend module. The repository root contains documentation and project support files.
 
 ### 5. Configure Git identity
 
@@ -100,6 +123,12 @@ git config --global user.email "your-email@example.com"
 ```
 
 ### 6. Create the first local commit
+
+Run the commands from:
+
+```text
+C:\GitHub\zabbix-bgp-sessions-widget
+```
 
 ```powershell
 # Initializes a new Git repository in the current folder.
@@ -154,11 +183,46 @@ git tag -a v0.3.4 -m "BGP Sessions widget v0.3.4"
 git push origin v0.3.4
 ```
 
+### 10. Directory mapping summary
+
+```text
+Local Windows repository:
+C:\GitHub\zabbix-bgp-sessions-widget
+
+Zabbix module inside the repository:
+C:\GitHub\zabbix-bgp-sessions-widget\bgp_sessions
+
+Zabbix frontend module path on Linux:
+/usr/share/zabbix/modules/bgp_sessions
+```
+
+Do not copy the whole GitHub repository to the Zabbix frontend modules directory. Copy only the `bgp_sessions` directory.
+
 ---
 
 ## Português do Brasil
 
-Este guia mostra como criar o repositório no GitHub e enviar a primeira versão do widget **BGP Sessions** usando Windows 11 e PowerShell.
+Este guia mostra como criar o repositório no GitHub e enviar a primeira versão do widget **BGP Sessions** usando **Windows 11**, **PowerShell**, **Git** e **GitHub CLI**.
+
+Os exemplos usam o diretório local:
+
+```text
+C:\GitHub
+```
+
+A pasta local do repositório ficará assim:
+
+```text
+C:\GitHub\zabbix-bgp-sessions-widget
+```
+
+O diretório do módulo Zabbix dentro do repositório é:
+
+```text
+C:\GitHub\zabbix-bgp-sessions-widget\bgp_sessions
+```
+
+Na instalação no servidor frontend do Zabbix, copie somente o diretório `bgp_sessions` para o diretório de módulos do Zabbix.
 
 ### Informações sugeridas do repositório
 
@@ -207,14 +271,12 @@ Login with a web browser
 
 ### 3. Criar a pasta local do projeto
 
-Ajuste o caminho se preferir outro local.
-
 ```powershell
-# Cria uma pasta local para projetos.
-mkdir C:\Projetos
+# Cria a pasta local C:\GitHub caso ela ainda não exista.
+mkdir C:\GitHub -Force
 
-# Entra na pasta de projetos.
-cd C:\Projetos
+# Entra na pasta de trabalho.
+cd C:\GitHub
 
 # Cria a pasta do repositório.
 mkdir zabbix-bgp-sessions-widget
@@ -225,22 +287,27 @@ cd zabbix-bgp-sessions-widget
 
 ### 4. Copiar os arquivos do projeto
 
-Copie todos os arquivos desta pasta de projeto preparada para:
+Copie todos os arquivos preparados do projeto para:
 
 ```text
-C:\Projetos\zabbix-bgp-sessions-widget
+C:\GitHub\zabbix-bgp-sessions-widget
 ```
 
 A pasta final deve conter:
 
 ```text
-bgp_sessions\
-README.md
-INSTALL.md
-CHANGELOG.md
-GITHUB_SETUP_WINDOWS11.md
-.gitignore
+C:\GitHub\zabbix-bgp-sessions-widget\
+│
+├── bgp_sessions\
+├── README.md
+├── INSTALL.md
+├── CHANGELOG.md
+├── GITHUB_SETUP_WINDOWS11.md
+├── .gitignore
+└── scripts\
 ```
+
+O diretório `bgp_sessions` é o módulo frontend real do Zabbix. A raiz do repositório contém a documentação e arquivos auxiliares do projeto.
 
 ### 5. Configurar a identidade do Git
 
@@ -253,6 +320,12 @@ git config --global user.email "seu-email@example.com"
 
 ### 6. Criar o primeiro commit local
 
+Execute os comandos a partir de:
+
+```text
+C:\GitHub\zabbix-bgp-sessions-widget
+```
+
 ```powershell
 # Inicializa um novo repositório Git na pasta atual.
 git init
@@ -260,7 +333,7 @@ git init
 # Define o nome da branch principal como main.
 git branch -M main
 
-# Mostra os arquivos que o Git pode controlar.
+# Mostra os arquivos que o Git pode rastrear.
 git status
 
 # Adiciona todos os arquivos do projeto ao primeiro commit.
@@ -270,9 +343,9 @@ git add .
 git commit -m "Initial release of BGP Sessions widget"
 ```
 
-### 7. Criar o repositório no GitHub e fazer o push
+### 7. Criar o repositório no GitHub e enviar
 
-Usando GitHub CLI:
+Usando o GitHub CLI:
 
 ```powershell
 # Cria o repositório no GitHub e envia o repositório local atual.
@@ -284,7 +357,7 @@ gh repo create zabbix-bgp-sessions-widget `
   --push
 ```
 
-Para criar como repositório privado, substitua `--public` por:
+Para repositório privado, substitua `--public` por:
 
 ```powershell
 --private
@@ -299,9 +372,24 @@ gh repo edit --add-topic zabbix,zabbix-widget,bgp,juniper,monitoring,snmp,networ
 ### 9. Criar a primeira tag de versão
 
 ```powershell
-# Cria uma tag anotada local para a versão atual do módulo.
+# Cria uma tag local anotada para a versão atual do módulo.
 git tag -a v0.3.4 -m "BGP Sessions widget v0.3.4"
 
 # Envia a tag para o GitHub.
 git push origin v0.3.4
 ```
+
+### 10. Resumo do mapeamento dos diretórios
+
+```text
+Repositório local no Windows:
+C:\GitHub\zabbix-bgp-sessions-widget
+
+Módulo Zabbix dentro do repositório:
+C:\GitHub\zabbix-bgp-sessions-widget\bgp_sessions
+
+Caminho do módulo no frontend Zabbix em Linux:
+/usr/share/zabbix/modules/bgp_sessions
+```
+
+Não copie o repositório inteiro do GitHub para o diretório de módulos do frontend Zabbix. Copie somente o diretório `bgp_sessions`.
