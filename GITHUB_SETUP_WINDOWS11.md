@@ -177,10 +177,10 @@ gh repo edit --add-topic zabbix,zabbix-widget,bgp,juniper,monitoring,snmp,networ
 
 ```powershell
 # Creates a local annotated tag for the current module version.
-git tag -a v0.3.4 -m "BGP Sessions widget v0.3.4"
+git tag -a v0.3.5 -m "BGP Sessions widget v0.3.5"
 
 # Pushes the tag to GitHub.
-git push origin v0.3.4
+git push origin v0.3.5
 ```
 
 ### 10. Directory mapping summary
@@ -373,10 +373,10 @@ gh repo edit --add-topic zabbix,zabbix-widget,bgp,juniper,monitoring,snmp,networ
 
 ```powershell
 # Cria uma tag local anotada para a versão atual do módulo.
-git tag -a v0.3.4 -m "BGP Sessions widget v0.3.4"
+git tag -a v0.3.5 -m "BGP Sessions widget v0.3.5"
 
 # Envia a tag para o GitHub.
-git push origin v0.3.4
+git push origin v0.3.5
 ```
 
 ### 10. Resumo do mapeamento dos diretórios
