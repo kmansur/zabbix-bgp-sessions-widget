@@ -4,7 +4,7 @@
   "type": "widget",
   "name": "BGP Sessions",
   "namespace": "BgpSessions",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "author": "Net Tech",
   "description": "BGP sessions dashboard widget for Zabbix 7.0 with automatic Juniper BGP item discovery and compact cards. State is shown only when the session is not UP.",
   "actions": {
@@ -14,7 +14,7 @@
   },
   "assets": {
     "css": [
-      "widget_v034.css"
+      "widget.css"
     ]
   }
 }
