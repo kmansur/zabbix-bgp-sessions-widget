@@ -31,12 +31,12 @@ net.bgp.peer.prefixes.ipv4.received[AS, PEER]
 net.bgp.peer.prefixes.ipv6.received[AS, PEER]
 ```
 
-Example:
+Documentation example using placeholder values:
 
 ```text
-net.bgp.peer.state[52863, 10.177.128.86]
-net.bgp.peer.uptime[52863, 10.177.128.86]
-net.bgp.peer.prefixes.ipv4.received[52863, 10.177.128.86]
+net.bgp.peer.state[AS_EXAMPLE, PEER_EXAMPLE]
+net.bgp.peer.uptime[AS_EXAMPLE, PEER_EXAMPLE]
+net.bgp.peer.prefixes.ipv4.received[AS_EXAMPLE, PEER_EXAMPLE]
 ```
 
 ### Widget configuration
@@ -104,12 +104,12 @@ net.bgp.peer.prefixes.ipv4.received[AS, PEER]
 net.bgp.peer.prefixes.ipv6.received[AS, PEER]
 ```
 
-Exemplo:
+Exemplo de documentação usando valores fictícios:
 
 ```text
-net.bgp.peer.state[52863, 10.177.128.86]
-net.bgp.peer.uptime[52863, 10.177.128.86]
-net.bgp.peer.prefixes.ipv4.received[52863, 10.177.128.86]
+net.bgp.peer.state[AS_EXAMPLE, PEER_EXAMPLE]
+net.bgp.peer.uptime[AS_EXAMPLE, PEER_EXAMPLE]
+net.bgp.peer.prefixes.ipv4.received[AS_EXAMPLE, PEER_EXAMPLE]
 ```
 
 ### Configuração do widget
